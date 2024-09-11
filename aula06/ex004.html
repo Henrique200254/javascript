@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+        document.writeln(`<h2> Olá, ${nome}! Seu nome tem ${nome.length} letras<h2>`) // serve para mostrar coisas na tela. E o que termina com ln quebra linha
+        document.writeln(`<h2> Seu nome em maiúsculas é: ${nome.toUpperCase()}<h2>`)    
+        document.writeln(`Seu nome em minúsculas é: ${nome.toLowerCase()}`)
+        /* Formatando Números:
+           n.toFixed() nos permite aumentar o números de casas decimais, acrescentando mais zeros no final.
+           n.toFixed().replace('','') nos permite trocar uma coisa por outra. No caso, é bastante usado para colocar vírgula após a casa dos milhares no lugar do ponto. EX: n.toFixed().replace('.',',')
+           n.toLocaleString('pt-BR', {style:'currency', currency:'BRL'}) permite criar uma string localizada para português e entre chaves colocamos as configurações de objeto e dentro das chaves o currency tem significado de Valor monetário, e configuramos ele para Real do Brasil, BRL. Serve para configurar salário. Isso serve para Brasil e outrs países
+           n.toLocaleString('pt-BR', {style:'currency', currency:'USD'}) Para Dolar
+           n.toLocaleString('pt-BR', {style:'currency', currency:'EUR'}) Para Euro
+        
+        */
+    </script>
+</body>
+</html>
