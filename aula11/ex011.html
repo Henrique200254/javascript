@@ -17,10 +17,11 @@
         function local() {
             var país = window.document.getElementById('país')
             var res = window.document.getElementById('res')
-            if (país.value == 'Brasil') {
-                res.innerHTML = `Nascendo em ${país.value}, Voçê é Brasileiro!`
+            res.innerHTML = `Voçê mora em ${país.value}!`
+            if (país.value == 'Brasil', 'brasil', 'br') {
+                res.innerHTML += `<br>Nascendo em ${país.value}, Voçê é Brasileiro!</br>`
             } else {
-                res.innerHTML = `Nascendo em ${país.value}, Voçê é Estrangeiro!`
+                res.innerHTML += `<br>Nascendo em ${país.value}, Voçê é Estrangeiro!</br>`
             }
         }
         
