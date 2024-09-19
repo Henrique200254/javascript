@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            border: 0px;
+        }
+        
+        html, body{
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(69, 144, 243);
+            color: white;
+        }
+
+        header {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 30px;
+            font-size: 2.5em;
+        }
+        
+        section {
+            display: flex;
+            flex-flow: column nowrap;
+            width: 500px;
+            height: 300px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.555);
+            
+        }
+
+        div#msg {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+            
+        }
+
+        div {
+            color: black;
+        }
+
+        div#foto {
+            justify-self: center;
+            align-self: center;
+        }
+        
+        img {
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body id="fundo" onload="carregar()">
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
+    <section>
+           <div id="msg">Testando...</div>
+           <div id="foto">
+            <img id="imagem" src="imagens/pexels-manhã.jpg" alt="manhã">
+           </div>
+    </section>
+    <footer>
+        <p>©Cursoemvideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
