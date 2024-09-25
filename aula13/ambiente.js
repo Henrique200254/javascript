@@ -1,4 +1,5 @@
 var c = 1
+typeof c
 while (c <= 6) {
     console.log(`Passo ${c}`)
     c++
