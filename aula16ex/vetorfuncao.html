@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(79, 137, 243);
+        }
+        
+        header {
+            color: white;
+            text-align: center;
+        }
+
+        div {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        section {
+            background-color: white;
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            
+        }
+
+        select {
+            width: 150px;
+            text-align: start;
+            display: block;
+        }
+ 
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+        Número (entre 1 e 100):
+        <input type="number" name="txtn" id="txtn">
+        <input type="button" value="Adicionar" onclick="analisar()">
+        </div>
+        <select name="lista" id="lista" size="10"></select>
+        <input type="button" value="Finalizar" onclick="finalizar()">
+        <div id="res">
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+
+</body>
+</html>
