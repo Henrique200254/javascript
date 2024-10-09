@@ -100,3 +100,37 @@ console.log(names.sort())
 let namesisarray = Array.isArray(names)
 console.log(namesisarray)
 
+// MAP, é um metodo muito usado para multiplicar valores de um array. Ele vai executar uma função com cada um dos elementos do array e retornar o resultado em uma lista ou array novo.
+
+ numerosmultiplicados = lista.map(numeros => {
+    return numeros * 2
+ })
+
+ /*
+   OU
+
+   numerosmultiplicados = lista.map(function(numeros) {
+        return numeros * 2
+   })
+ */
+
+ console.log(numerosmultiplicados)
+
+
+ // Filter vai filtar uma lista ou array e retornar uma lista nova baseado no filtro que passamos.
+
+ const age = [13, 25, 22, 37, 43, 50]
+
+ const evenAges = age.filter(function (numeros) {
+     return numeros % 2 == 0
+ })
+
+console.log(evenAges)
+
+// Reduce, ele é muito util quando queremos reduzir todos os valores de uma lista. Reduzimos todos eles a apenas um número. Ele sempre tem dois parâmetros: numeros e Acumulador. O acumulador seria o Total. No caso de uma soma ele seria o valor final e também um dos valores operados durante a execução. Ele começa com 0 e vai recebendo valores a medida que a operação vai ocorrendo. Sempre depois das chaves devemos especificar o valor inicial do acumulador, com ',' e depois o número.
+
+const somaIdade = age.reduce(function(age, acumulador) {
+    return acumulador + age
+},0)
+
+console.log(somaIdade)
