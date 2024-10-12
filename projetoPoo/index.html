@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Minha loja</h1>
+    </header>
+    <main>
+        <div class="title">
+            <h2>Produtos</h2>
+            <span>Lista de produtos da loja.</span>
+        </div>
+        
+        <div class="card">
+            <div class="lineinput">
+                <label for="produto">Produto</label>
+                <input type="text" name="produto" id="produto" placeholder="Nome do produto">
+            </div>
+            
+            <div class="lineinput">
+                <label for="valor">Valor</label>
+                <input type="text" name="valor" id="valor" placeholder="Valor de produto">
+            </div>
+            <button onclick="produto.salvar()">Salvar</button>
+            <button onclick="produto.cancelar()">Cancelar</button>
+        </div>
+
+        <div class="conteudo">
+             <table>
+                <caption>Lista de Produtos</caption>
+                <thead>
+                    <th class="center">ID</th>
+                    <th>Nome</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </thead>
+                <tbody>
+                    <tr class="center">
+                        <td>1</td>
+                        <td>mesa</td>
+                        <td>900</td>
+                        <td class="center">
+                            <img src="img/excluir.png" alt="deletar">
+                            <img src="img/favicon.png" alt="editar">
+                            
+                        </td>
+                    </tr>
+                    <tr class="center">
+                        <td>2</td>
+                        <td>Guarda-roupas</td>
+                        <td>2300</td>
+                        <td class="center">
+                            <img src="img/excluir.png" alt="deletar">
+                            <img src="img/favicon.png" alt="editar">
+                            
+                        </td>
+                    </tr>
+                    <tr class="center">
+                        <td>3</td>
+                        <td>Geladeira</td>
+                        <td>1500</td>
+                        <td class="center">
+                            <img src="img/excluir.png" alt="deletar">
+                            <img src="img/favicon.png" alt="editar">
+                            
+                        </td>
+                    </tr>
+                </tbody>
+             </table>
+        </div>
+    </main>
+
+    
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
