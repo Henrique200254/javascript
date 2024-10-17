@@ -26,7 +26,7 @@
                 <label for="valor">Valor</label>
                 <input type="text" name="valor" id="valor" placeholder="Valor de produto">
             </div>
-            <button onclick="produto.salvar()">Salvar</button>
+            <button onclick="produto.salvar()" id="btn1">Salvar</button>
             <button onclick="produto.cancelar()">Cancelar</button>
         </div>
 
@@ -35,41 +35,12 @@
                 <caption>Lista de Produtos</caption>
                 <thead>
                     <th class="center">ID</th>
-                    <th>Nome</th>
+                    <th>Produto</th>
                     <th>Valor</th>
                     <th>Ações</th>
                 </thead>
-                <tbody>
-                    <tr class="center">
-                        <td>1</td>
-                        <td>mesa</td>
-                        <td>900</td>
-                        <td class="center">
-                            <img src="img/excluir.png" alt="deletar">
-                            <img src="img/favicon.png" alt="editar">
-                            
-                        </td>
-                    </tr>
-                    <tr class="center">
-                        <td>2</td>
-                        <td>Guarda-roupas</td>
-                        <td>2300</td>
-                        <td class="center">
-                            <img src="img/excluir.png" alt="deletar">
-                            <img src="img/favicon.png" alt="editar">
-                            
-                        </td>
-                    </tr>
-                    <tr class="center">
-                        <td>3</td>
-                        <td>Geladeira</td>
-                        <td>1500</td>
-                        <td class="center">
-                            <img src="img/excluir.png" alt="deletar">
-                            <img src="img/favicon.png" alt="editar">
-                            
-                        </td>
-                    </tr>
+                <tbody id="tbody">
+                    
                 </tbody>
              </table>
         </div>
