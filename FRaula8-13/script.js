@@ -135,16 +135,59 @@ console.log(Farco)
 // Dentro da função constructor vamos colocar o que essa classe terá como propriedade
 // Assinalamos essas propriedades (nome, sobrenome e idade) a person usando This
 class Person {
-    construtor(nome, sobrenome, idade) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.idade = idade;
+    constructor(nome, sobrenome, idade) {
+        (this.nome = nome);
+        (this.sobrenome = sobrenome);
+        (this.idade = idade);
+    }
+
+    getFullName () {
+        console.log(`${this.nome} ${this.sobrenome}`)
+    }
+
+    static speak () {
+        console.log("Hello World")
     }
 }
 
 // Agora vamos torna person numa instância, usamos a key word New. Depois vamos passar os parametros que o constructure recebe. Essa função é executada sempre que essa classe é instânciada.
 
-let person = new Person("Jane", "Watkins", "18")
+const person = new Person("Jane", "Watkins", "18")
 console.log(person)
+person.getFullName()
+Person.speak()
+
+// this é usado sempre para chamar uma função ou dado para outra função dentro da classe.
+// speak é uma função ou metodo estático, ele não precisou instanciar nenhuma das propriedades do objeto Person, seja nome, sobrenome ou idade. Então o metodo speak para ser chamado antes dele deve ter a classe e não a variavel em que colocamos new Person. Quando a função é estatica não podemos acessar as propriedades e dados colocados no constructor de Person ou da classe.
 
 
+// Em POO conseguimos Herdar determinada classe para dentro de outra classe, isso é o conceito de Herança.
+
+class Animal {
+    constructor (nome) {
+        this.nome = nome
+    }
+
+    speak () {
+        console.log(`${this.nome} made some noise`)
+    }
+}
+
+  const animal = new Animal('Simba')
+  animal.speak()
+
+// Vamos extender a classe Animal porque vamos criar a classe cachorro e todo cachorro é um animal, então ele vai herdar as caracteristicas de animal. Como ele extende, ele vai receber os mesmos parâmetros que Animal recebe. O Super dentro da segunda classe é para chamar o constructor de outra classe.
+
+class Cachorro extends Animal {
+     constructor(nome) {
+        super(nome);
+     }
+
+
+}
+
+
+const cachorro = new Animal('Lady')
+cachorro.speak()
+
+// A aula 12 de selecionar elementos esta na pag HTML, na CSS e Main.JS
