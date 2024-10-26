@@ -5,6 +5,7 @@
    const submit = document.querySelector('#submit-button')
    const form = document.querySelector('#my-form')
    const items = document.querySelector('.items')
+   const erromsg = document.querySelector('.msg')
    submit.addEventListener('click', clicou)
    
    function clicou(evento) {
@@ -16,12 +17,28 @@
     const emailvalue = email.value
 
     if (namevalue === "" || emailvalue === "") {
-       return alert('Por favor preencha os campos!')
+       // return alert('Por favor preencha os campos!')
+       erromsg.textContent = 'Por favor preencha os campos!'
+       erromsg.classList = 'error'
+      setTimeout(() => {
+         erromsg.textContent = ''
+         erromsg.classList = ''
+      }, 3000);
+       return
     }
+
+    const li = document.createElement('li')
+    li.classList = 'item'
+    li.innerHTML = `Nome: ${namevalue}, Email: ${emailvalue}`
+    items.appendChild(li)
     
     form.style.background = 'red'
-    items.firstElementChild.textContent = namevalue
-    items.children[1].textContent = emailvalue
+   // items.firstElementChild.textContent = namevalue
+    //items.children[1].textContent = emailvalue
+    
+    nameinput.value = ''
+    email.value = ''
+ 
 
 
    }
@@ -49,3 +66,9 @@ submit.addEventListener('click', function () {
    //por meio desse listener e do atributo target, verificamos o valor atual do input. Então após digitar um valor e enviar, se escrevermos novamente um valor no input, conseguimos ver ele no console.
 
    // Por meio do return obrigamos uma função a ser encerrada ali caso a condição seja verdadeira. Assim impedimos das linhas abaixo serem lidas. Ajuda muito para controle e validação.
+
+   // Podemos adicionar uma classe de nosso CSS no elemento ou variavel do Javascript, fazemos isso colocando '.classList' numa variavel. E depois do '=' colocamos o nome das classes entre aspas que a variavel irá receber.
+
+   // Podemos usar o método createElement() para criar tags e elementos HTML via Javascript, permitindo criar elementos dinâmicamente na nossa página. Dentro do parentesis colocamos o nome da tag. Mas junto com ela, para exibir na tela o nosso elemento precisamos tronar ele filho de outro. Para isso usamos o método appendChild(). Dentro do parentesis de appendChild colocamos a variavel que recebeu o createElement.
+
+   // Por meio da função setTimeout podemos configurar o tempo em que uma mensagem ficará sendo exibida. Na parte debaixo do exemplo, fica escrito Timeout, nele colocamos em milisegundos o tempo em que o elemento ficará sendo exibido. Dentro da função colocamos o elemento que queremos apagar a mensagem por exemplo, repetindo a variavel e colocando ela para receber " ", e retirando uma classe de CSS também colocando para receber ''.
